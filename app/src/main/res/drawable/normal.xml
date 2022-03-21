@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:left="0dp"
+        android:right="0dp">
+        <shape android:shape="rectangle">
+<!--            This color show the underline key of every keys-->
+            <solid android:color="#292929"/>
+
+        </shape>
+    </item>
+
+    <item
+        android:bottom="2dp">
+        <shape android:shape="rectangle">
+<!--            Button Backgtound-->
+            <solid android:color="@color/button_background_color"/>
+<!--            <corners android:radius="5dp"/>-->
+        </shape>
+    </item>
+
+</layer-list>
