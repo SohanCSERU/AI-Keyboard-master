@@ -46,8 +46,7 @@
         <Key android:codes="0x09B2" android:keyLabel="ল" android:keyWidth="11.5%p" android:keyEdgeFlags="right"/>
     </Row>
     <Row>
-        <Key android:codes="-147" android:keyLabel="CAPS" android:keyWidth="13%p" android:keyEdgeFlags="left"/>
-        <Key android:codes="0x09DF" android:keyLabel="য়" android:keyWidth="8%p"/>
+        <Key android:codes="-1" android:keyIcon="@drawable/sym_keyboard_shift" android:keyEdgeFlags="left"/>        <Key android:codes="0x09DF" android:keyLabel="য়" android:keyWidth="8%p"/>
         <Key android:codes="0x09B6" android:keyLabel="শ" android:keyWidth="8%p" />
         <Key android:codes="0x099A" android:keyLabel="চ" android:keyWidth="8%p"/>
         <Key android:codes="0x0986" android:keyLabel="আ" android:keyWidth="8%p"/>
@@ -67,7 +66,7 @@
         <Key android:codes="32" android:keyLabel="SPACE" android:keyWidth="40%p" android:isRepeatable="true"/>
 
         <Key android:codes="46" android:keyLabel="." android:keyWidth="5%p"/>
-        <Key android:codes="-4" android:keyLabel="↵" android:keyWidth="20%p" android:keyEdgeFlags="right"/>
+        <Key android:codes="-4" android:keyIcon="@drawable/sym_keyboard_return" android:keyWidth="20%p" android:keyEdgeFlags="right"/>
     </Row>
     <!--    latin:keySpec="&#x0993;" latin:moreKeys="&#x09CB;"-->
 </Keyboard>
