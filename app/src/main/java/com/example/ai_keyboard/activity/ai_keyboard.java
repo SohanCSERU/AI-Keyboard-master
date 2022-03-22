@@ -67,6 +67,12 @@ public class ai_keyboard extends InputMethodService implements KeyboardView.OnKe
                 banglaKeyboardView.setKeyboard(keyboard);
                 banglaKeyboardView.setOnKeyboardActionListener(this);
                 break;
+            case -258:
+                keyboard = new Keyboard(this,R.xml.bangla_number);
+                banglaKeyboardView.setKeyboard(keyboard);
+                banglaKeyboardView.setOnKeyboardActionListener(this);
+                break;
+
             case -123456789:
                 keyboard = new Keyboard(this,R.xml.qwerty);
                 banglaKeyboardView.setKeyboard(keyboard);
