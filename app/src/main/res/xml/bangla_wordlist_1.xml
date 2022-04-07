@@ -3,7 +3,7 @@
 <Keyboard xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:latin="http://schemas.android.com/apk/res-auto"
 
-    android:keyWidth = "10%p"
+    android:keyWidth = "8%p"
     android:horizontalGap = "0px"
     android:verticalGap="0px"
     android:keyHeight="60dp">
@@ -46,18 +46,19 @@
         <Key android:codes="0x09B2" android:keyLabel="ল" android:keyWidth="11.5%p" android:keyEdgeFlags="right"/>
     </Row>
     <Row>
-        <Key android:codes="-1" android:keyIcon="@drawable/sym_keyboard_shift" android:keyEdgeFlags="left"/>        <Key android:codes="0x09DF" android:keyLabel="য়" android:keyWidth="8%p"/>
-        <Key android:codes="0x09B6" android:keyLabel="শ" android:keyWidth="8%p" />
-        <Key android:codes="0x099A" android:keyLabel="চ" android:keyWidth="8%p"/>
-        <Key android:codes="0x0986" android:keyLabel="আ" android:keyWidth="8%p"/>
-        <Key android:codes="0x09AC" android:keyLabel="ব" android:keyWidth="8%p"/>
-        <Key android:codes="0x09A8" android:keyLabel="ন" android:keyWidth="8%p"/>
-        <Key android:codes="0x09AE" android:keyLabel="ম" android:keyWidth="8%p"/>
-        <Key android:codes="0x09C3" android:keyLabel="ৃ" android:keyWidth="8%p"/>
-        <Key android:codes="0x09CD" android:keyLabel="্" android:keyWidth="8%p"/>
-        <!--        <Key android:codes="46" android:keyLabel="."/>-->
-        <Key android:codes="-5" android:keyLabel="⌫" android:keyWidth="15%p" android:keyEdgeFlags="right" android:isRepeatable="true"/>
+        <Key android:codes="-147" android:keyIcon="@drawable/ic_arrow_upward" android:keyWidth="14%p" android:keyEdgeFlags="left"/>
+        <Key android:codes="0x09DF" android:keyLabel="য়" />
+        <Key android:codes="0x09B6" android:keyLabel="শ"  />
+        <Key android:codes="0x099A" android:keyLabel="চ" />
+        <Key android:codes="0x0986" android:keyLabel="আ" />
+        <Key android:codes="0x09AC" android:keyLabel="ব" />
+        <Key android:codes="0x09A8" android:keyLabel="ন" />
+        <Key android:codes="0x09AE" android:keyLabel="ম" />
+        <Key android:codes="0x09C3" android:keyLabel="ৃ" />
+        <Key android:codes="0x09CD" android:keyLabel="্" />
+        <Key android:codes="-5" android:keyWidth="16%p" android:keyIcon="@drawable/ic_backspace" android:keyEdgeFlags="right" android:isRepeatable="true"/>
     </Row>
+
     <Row android:rowEdgeFlags="bottom">
         <Key android:codes="-258" android:keyLabel="\?১২৩" android:keyWidth="10%p"  android:keyEdgeFlags="left"/>
         <Key android:codes="-123456789" android:keyLabel="EN" android:isModifier="true" android:keyWidth="20%p"  />
@@ -65,8 +66,8 @@
         <Key android:codes="64" android:keyLabel="," android:keyWidth="5%p"/>
         <Key android:codes="32" android:keyLabel="SPACE" android:keyWidth="40%p" android:isRepeatable="true"/>
 
-        <Key android:codes="46" android:keyLabel="." android:keyWidth="5%p"/>
-        <Key android:codes="-4" android:keyIcon="@drawable/sym_keyboard_return" android:keyWidth="20%p" android:keyEdgeFlags="right"/>
+        <Key android:codes="0x09F7" android:keyLabel="।" android:keyWidth="5%p"/>
+        <Key android:codes="-4" android:keyIcon="@drawable/ic_keyboard_return" android:keyWidth="20%p" android:keyEdgeFlags="right"/>
     </Row>
     <!--    latin:keySpec="&#x0993;" latin:moreKeys="&#x09CB;"-->
 </Keyboard>
