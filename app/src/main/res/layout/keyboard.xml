@@ -11,4 +11,5 @@
     android:keyPreviewLayout="@layout/key_preview"
     android:background="@color/keyboard_background_color">
 
+
 </android.inputmethodservice.KeyboardView>

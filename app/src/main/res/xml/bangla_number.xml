@@ -33,7 +33,7 @@
         <Key android:codes="41" android:keyLabel=")" android:keyEdgeFlags="right"/>
     </Row>
     <Row>
-        <Key android:codes="-1" android:keyIcon="@drawable/ic_arrow_upward" android:isSticky="true" android:isModifier="true" android:keyEdgeFlags="left"/>
+        <Key android:codes="-8520" android:keyLabel="ALT" android:isSticky="true" android:isModifier="true" android:keyEdgeFlags="left"/>
         <Key android:codes="33" android:keyLabel="!"/>
         <Key android:codes="34" android:keyLabel="&quot;"/>
         <Key android:codes="39" android:keyLabel="&apos;"/>

@@ -41,7 +41,7 @@
         <Key android:codes="0x0998" android:keyLabel="ঘ" android:keyWidth="11%p"/>
         <Key android:codes="0x0983" android:keyLabel="ঃ" android:keyWidth="11%p"/>
         <Key android:codes="0x099D" android:keyLabel="ঝ" android:keyWidth="11%p"/>
-        <Key android:codes="0x09A5" android:keyLabel="খ" android:keyWidth="11%p"/>
+        <Key android:codes="0x0996" android:keyLabel="খ" android:keyWidth="11%p"/>
         <Key android:codes="0x0982" android:keyLabel="ং" android:keyWidth="11.5%p" android:keyEdgeFlags="right"/>
     </Row>
     <Row>
