@@ -10,6 +10,7 @@
     android:keyBackground="@drawable/key_background"
     android:keyPreviewLayout="@layout/key_preview"
     android:background="@color/keyboard_background_color">
+    <!--    Keyboard Background Color-->
 
 
 </android.inputmethodservice.KeyboardView>

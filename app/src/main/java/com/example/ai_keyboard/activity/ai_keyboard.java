@@ -1,28 +1,13 @@
 package com.example.ai_keyboard.activity;
 
-import android.app.Activity;
 import android.inputmethodservice.InputMethodService;
 import android.inputmethodservice.Keyboard;
 import android.inputmethodservice.KeyboardView;
 import android.media.AudioManager;
-import android.os.Build;
 import android.provider.UserDictionary;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
-import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputConnection;
-import android.view.inputmethod.InputMethodManager;
-import android.view.inputmethod.InputMethodSubtype;
-import android.view.textservice.SentenceSuggestionsInfo;
-import android.view.textservice.SpellCheckerSession;
-import android.view.textservice.SuggestionsInfo;
-import android.widget.TextView;
-
-import java.security.Key;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
 
 public class ai_keyboard extends InputMethodService implements KeyboardView.OnKeyboardActionListener{
 
@@ -52,6 +37,26 @@ public class ai_keyboard extends InputMethodService implements KeyboardView.OnKe
 //    }
 
 
+    @Override
+    public View onCreateCandidatesView() {
+
+//        LayoutInflater li = (LayoutInflater) getApplicationContext()
+//                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+//        View wordBar = li.inflate(R.layout.wordbar, null);
+//        LinearLayout ll = (LinearLayout) wordBar.findViewById(R.id.words);
+////        Button voiceCmd = (Button) wordBar.findViewById(R.id.voiceword);
+//        LinearLayout ll1 = null;
+//        Button voiceCmd1 = null;
+        //comment this block in the event of showing only one keyboard so that we can only
+        //one autocorrect bar
+
+        mCandidateView = new CandidateView(this);
+        mCandidateView.setService(this);
+        setCandidatesViewShown(true);
+        //addView(mCandidateView);;
+
+        return null;
+    }
 
     @Override
     public void onPress(int i) {
