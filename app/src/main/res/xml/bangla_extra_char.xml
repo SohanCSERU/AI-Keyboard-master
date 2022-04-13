@@ -35,7 +35,7 @@
     </Row>
 
     <Row>
-        <Key android:codes="-456" android:keyLabel="ALT"
+        <Key android:codes="-258" android:keyLabel="ALT"
             android:keyWidth="15%p" android:isModifier="true"
             android:isSticky="true" android:keyEdgeFlags="left"/>
         <Key android:codes="161" android:keyLabel="¡" />
@@ -52,7 +52,7 @@
 
     <Row android:rowEdgeFlags="bottom">
         <Key android:codes="-123456789" android:keyLabel="ABC" android:keyWidth="10%p"  android:keyEdgeFlags="left"/>
-        <Key android:codes="-456" android:keyLabel="EN" android:isModifier="true" android:keyWidth="20%p"  />
+        <Key android:codes="-123" android:keyLabel="প্রভাত" android:isModifier="true" android:keyWidth="20%p"  />
 
         <Key android:codes="44" android:keyLabel="," android:keyWidth="5%p"/>
         <Key android:codes="32" android:keyLabel="SPACE" android:keyWidth="40%p" android:isRepeatable="true"/>

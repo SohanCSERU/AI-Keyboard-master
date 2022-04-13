@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/keyboard_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ai Based"
+        android:fontFamily="@font/comfortaa_bold"
+        android:textColor="#FB8C00"
+        android:gravity="left"
+        android:textSize="25sp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="50dp"
+        />
+
+    <TextView
+        android:id="@+id/keyboard_title_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_title_name"
+        android:layout_below="@+id/keyboard_title"
+        android:fontFamily="@font/comfortaa_bold"
+        android:textColor="@color/title_color"
+        android:gravity="center"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        />
+    <EditText
+        android:id="@+id/text_to_write"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/keyboard_title_2"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:padding="10dp"
+        android:hint="Write Here"/>
+
+</RelativeLayout>

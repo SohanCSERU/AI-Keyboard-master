@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">AI_Keyboard</string>
+    <string name="app_title_name">Bangla Keyboard</string>
     <string name="alternate">ALT</string>
 </resources>

@@ -8,8 +8,10 @@
     <color name="black">#000000</color>
     <color name="white">#FFFFFF</color>
 
+    <color name="title_color">#202020</color>
+
     <color name="keyboard_text_color">#FFFFFF</color>
-    <color name="keyboard_background_color">#A5A5A5</color>
+    <color name="keyboard_background_color">#151515</color>
     <color name="button_background_color">#181818</color>
 
     <color name="keyboard_divider">#FF0000</color>
@@ -17,5 +19,10 @@
 <!--    After Keyboard Press popup Background-->
     <color name="keyboard_pressed">#000000</color>
 
+<!--    ADDED Candidate Colors-->
+    <color name="candidate_normal">#FF000000</color>
+    <color name="candidate_recommended">#000000</color>
+    <color name="candidate_other">#ff808080</color>
+    <color name="candidate_background">#bbffffff</color>
 
 </resources>

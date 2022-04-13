@@ -4,16 +4,20 @@ import android.inputmethodservice.InputMethodService;
 import android.inputmethodservice.Keyboard;
 import android.inputmethodservice.KeyboardView;
 import android.media.AudioManager;
+import android.provider.UserDictionary;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.InputConnection;
 
-public class ai_keyboard extends InputMethodService implements KeyboardView.OnKeyboardActionListener {
+public class ai_keyboard extends InputMethodService implements KeyboardView.OnKeyboardActionListener{
 
     //    private KeyboardView kv;
     private KeyboardView banglaKeyboardView;
     private Keyboard keyboard;
     private boolean isCaps = false;
+    UserDictionary userDictionary;
+
+    private CandidateView mCandidateView;
 
     @Override
     public View onCreateInputView() {
@@ -22,6 +26,36 @@ public class ai_keyboard extends InputMethodService implements KeyboardView.OnKe
         banglaKeyboardView.setKeyboard(keyboard);
         banglaKeyboardView.setOnKeyboardActionListener(this);
         return banglaKeyboardView;
+    }
+//
+//    @Override
+//    public View onCreateCandidatesView() {
+//        mCandidateView = new CandidateView(this);
+//        mCandidateView.setService(this);
+//        setCandidatesViewShown(true);
+//        return mCandidateView;
+//    }
+
+
+    @Override
+    public View onCreateCandidatesView() {
+
+//        LayoutInflater li = (LayoutInflater) getApplicationContext()
+//                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+//        View wordBar = li.inflate(R.layout.wordbar, null);
+//        LinearLayout ll = (LinearLayout) wordBar.findViewById(R.id.words);
+////        Button voiceCmd = (Button) wordBar.findViewById(R.id.voiceword);
+//        LinearLayout ll1 = null;
+//        Button voiceCmd1 = null;
+        //comment this block in the event of showing only one keyboard so that we can only
+        //one autocorrect bar
+
+        mCandidateView = new CandidateView(this);
+        mCandidateView.setService(this);
+        setCandidatesViewShown(true);
+        //addView(mCandidateView);;
+
+        return null;
     }
 
     @Override
@@ -77,6 +111,11 @@ public class ai_keyboard extends InputMethodService implements KeyboardView.OnKe
                  banglaKeyboardView.setKeyboard(keyboard);
                  banglaKeyboardView.setOnKeyboardActionListener(this);
                  break;
+            case -8520:
+                 keyboard = new Keyboard(this,R.xml.bangla_extra_char);
+                 banglaKeyboardView.setKeyboard(keyboard);
+                 banglaKeyboardView.setOnKeyboardActionListener(this);
+                 break;
             case -123456789:
                 keyboard = new Keyboard(this,R.xml.qwerty);
                 banglaKeyboardView.setKeyboard(keyboard);
@@ -93,6 +132,7 @@ public class ai_keyboard extends InputMethodService implements KeyboardView.OnKe
                 ic.commitText(String.valueOf(code),i);
         }
     }
+
 
     private void playClick(int i) {
         AudioManager am = (AudioManager) getSystemService(AUDIO_SERVICE);
@@ -112,6 +152,9 @@ public class ai_keyboard extends InputMethodService implements KeyboardView.OnKe
 
         }
     }
+
+
+
 
     @Override
     public void onText(CharSequence charSequence) {
@@ -137,4 +180,5 @@ public class ai_keyboard extends InputMethodService implements KeyboardView.OnKe
     public void swipeUp() {
 
     }
+
 }
