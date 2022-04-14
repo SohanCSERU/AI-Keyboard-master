@@ -1,13 +1,17 @@
 package com.example.ai_keyboard.activity;
 
+import android.content.Context;
 import android.inputmethodservice.InputMethodService;
 import android.inputmethodservice.Keyboard;
 import android.inputmethodservice.KeyboardView;
 import android.media.AudioManager;
 import android.provider.UserDictionary;
 import android.view.KeyEvent;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.inputmethod.InputConnection;
+
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 public class ai_keyboard extends InputMethodService implements KeyboardView.OnKeyboardActionListener{
 
@@ -17,7 +21,7 @@ public class ai_keyboard extends InputMethodService implements KeyboardView.OnKe
     private boolean isCaps = false;
     UserDictionary userDictionary;
 
-    private CandidateView mCandidateView;
+     CandidatesView mCandidateView;
 
     @Override
     public View onCreateInputView() {
@@ -27,35 +31,13 @@ public class ai_keyboard extends InputMethodService implements KeyboardView.OnKe
         banglaKeyboardView.setOnKeyboardActionListener(this);
         return banglaKeyboardView;
     }
-//
-//    @Override
-//    public View onCreateCandidatesView() {
-//        mCandidateView = new CandidateView(this);
-//        mCandidateView.setService(this);
-//        setCandidatesViewShown(true);
-//        return mCandidateView;
-//    }
-
 
     @Override
     public View onCreateCandidatesView() {
-
-//        LayoutInflater li = (LayoutInflater) getApplicationContext()
-//                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-//        View wordBar = li.inflate(R.layout.wordbar, null);
-//        LinearLayout ll = (LinearLayout) wordBar.findViewById(R.id.words);
-////        Button voiceCmd = (Button) wordBar.findViewById(R.id.voiceword);
-//        LinearLayout ll1 = null;
-//        Button voiceCmd1 = null;
-        //comment this block in the event of showing only one keyboard so that we can only
-        //one autocorrect bar
-
-        mCandidateView = new CandidateView(this);
+        mCandidateView = new CandidatesView(this);
         mCandidateView.setService(this);
         setCandidatesViewShown(true);
-        //addView(mCandidateView);;
-
-        return null;
+        return mCandidateView;
     }
 
     @Override
@@ -76,6 +58,7 @@ public class ai_keyboard extends InputMethodService implements KeyboardView.OnKe
         {
             case Keyboard.KEYCODE_DELETE:
                 ic.deleteSurroundingText(1,0);
+                break;
             case Keyboard.KEYCODE_SHIFT:
                 isCaps = !isCaps;
                 keyboard.setShifted(isCaps);
@@ -181,4 +164,6 @@ public class ai_keyboard extends InputMethodService implements KeyboardView.OnKe
 
     }
 
+    public void pickSuggestionManually(int mSelectedIndex) {
+    }
 }
