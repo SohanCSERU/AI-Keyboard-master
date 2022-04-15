@@ -9,6 +9,7 @@ import android.provider.UserDictionary;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputConnection;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -110,12 +111,22 @@ public class ai_keyboard extends InputMethodService implements KeyboardView.OnKe
                 break;
             default:
                 char code = (char)i;
-                if(Character.isLetter(code) && isCaps)
+                if(Character.isLetter(code) && isCaps){
                     code = Character.toUpperCase(code);
+                    isCaps = !isCaps;
+                    keyboard.setShifted(isCaps);
+                    banglaKeyboardView.invalidateAllKeys();
+                }
                 ic.commitText(String.valueOf(code),i);
         }
     }
 
+    @Override
+    public void onStartInput(EditorInfo attribute, boolean restarting) {
+        super.onStartInput(attribute, restarting);
+
+        InputConnection ic =getCurrentInputConnection();
+    }
 
     private void playClick(int i) {
         AudioManager am = (AudioManager) getSystemService(AUDIO_SERVICE);
