@@ -43,5 +43,12 @@
         android:layout_marginRight="30dp"
         android:padding="10dp"
         android:hint="Write Here"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ans_to_show"
+        android:layout_below="@id/text_to_write"
+        android:padding="10dp"/>
+
 
 </RelativeLayout>
