@@ -7,6 +7,8 @@ import android.os.Build;
 import android.os.Bundle;
 import android.provider.UserDictionary;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -37,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
     TextView textView;
     EditText editText;
+    Button predictBtn;
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
@@ -45,34 +48,41 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         textView = findViewById(R.id.ans_to_show);
         editText = findViewById(R.id.text_to_write);
+        predictBtn = findViewById(R.id.predict_text);
 
 //        Classifier classifier = new Classifier();
         loadVocabData();
 
-//        String providedText = editText.getText().toString();
-        String providedText = "আমি তোমার";
-        String[] textData = spiltText(providedText);
+        predictBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                String providedText = editText.getText().toString();
+                //        String providedText = "আমি তোমার";
+                String[] textData = spiltText(providedText);
 
 
-        ArrayList<Integer> addedToSequence = new ArrayList<>();
-        addedToSequence = addedTextToSequence(textData);
+                ArrayList<Integer> addedToSequence = new ArrayList<>();
+                addedToSequence = addedTextToSequence(textData);
 
-        ArrayList<Integer> zeroPaddedSequence = new ArrayList<>();
-        zeroPaddedSequence = zeroPadding(addedToSequence);
+                ArrayList<Integer> zeroPaddedSequence = new ArrayList<>();
+                zeroPaddedSequence = zeroPadding(addedToSequence);
 
-        /*Here i Load the model and get
-        * the 10001 length probablity
-        * */
-        float[] output = loadModel(zeroPaddedSequence);
+                /*Here i Load the model and get
+                 * the 10001 length probablity
+                 * */
+                float[] output = loadModel(zeroPaddedSequence);
 
-        /* Sorted by probablity
-            first 10 output processed
-         */
-        ArrayList<Integer> sortedProbablity = new ArrayList<>();
-        sortedProbablity = sortingOutput(output);
+                /* Sorted by probablity
+                    first 10 output processed */
 
-        String ans = printText(sortedProbablity);
-        textView.setText(ans);
+                ArrayList<Integer> sortedProbablity = new ArrayList<>();
+                sortedProbablity = sortingOutput(output);
+
+                String ans = printText(sortedProbablity);
+                textView.setText(ans);
+            }
+        });
 
         UserDictionary.Words.addWord(this, "newMedicalWord", 1, UserDictionary.Words.LOCALE_TYPE_CURRENT);
     }
@@ -207,16 +217,16 @@ public class MainActivity extends AppCompatActivity {
 
     public String[] spiltText(String text){
         String[] s = text.split("\\s+");
-        for (int i=0;i<s.length;i++){
-            System.out.println(s[i]);
-        }
+//        for (int i=0;i<s.length;i++){
+//            System.out.println(s[i]);
+//        }
         return s;
     }
     public String printText(ArrayList<Integer>givenSequence){
         String texts = "";
         for (int i=0;i<givenSequence.size();i++){
             try {
-                texts +=" "+ newMap.get(givenSequence.get(i));
+                texts += newMap.get(givenSequence.get(i))+", "+"\n";
             }
             catch(NullPointerException e) {
                 e.printStackTrace();

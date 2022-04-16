@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/Users/HP/AppData/Local/Android/Sdk/platforms/android-31/data/res/drawable/list_selector_background.xml" value="0.1" />
         <entry key="..\:/Users/HP/Documents/Sohan/AI-Keyboard-master/AI-Keyboard-master/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2025" />
+        <entry key="..\:/Users/HP/Documents/Sohan/AI-Keyboard-master/AI-Keyboard-master/app/src/main/res/drawable/buttom_round.xml" value="0.111" />
         <entry key="..\:/Users/HP/Documents/Sohan/AI-Keyboard-master/AI-Keyboard-master/app/src/main/res/drawable/ic_arrow_downward.xml" value="0.163" />
         <entry key="..\:/Users/HP/Documents/Sohan/AI-Keyboard-master/AI-Keyboard-master/app/src/main/res/drawable/ic_arrow_upward.xml" value="0.11" />
         <entry key="..\:/Users/HP/Documents/Sohan/AI-Keyboard-master/AI-Keyboard-master/app/src/main/res/drawable/ic_backspace.xml" value="0.11" />
@@ -15,7 +16,7 @@
         <entry key="..\:/Users/HP/Documents/Sohan/AI-Keyboard-master/AI-Keyboard-master/app/src/main/res/drawable/normal.xml" value="0.2025" />
         <entry key="..\:/Users/HP/Documents/Sohan/AI-Keyboard-master/AI-Keyboard-master/app/src/main/res/drawable/pressed.xml" value="0.2025" />
         <entry key="..\:/Users/HP/Documents/Sohan/AI-Keyboard-master/AI-Keyboard-master/app/src/main/res/font/font.xml" value="0.31851851851851853" />
-        <entry key="..\:/Users/HP/Documents/Sohan/AI-Keyboard-master/AI-Keyboard-master/app/src/main/res/layout/activity_main.xml" value="0.21784420289855072" />
+        <entry key="..\:/Users/HP/Documents/Sohan/AI-Keyboard-master/AI-Keyboard-master/app/src/main/res/layout/activity_main.xml" value="0.2852512155591572" />
         <entry key="..\:/Users/HP/Documents/Sohan/AI-Keyboard-master/AI-Keyboard-master/app/src/main/res/layout/input.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/HP/Documents/Sohan/AI-Keyboard-master/AI-Keyboard-master/app/src/main/res/layout/key_preview.xml" value="0.11481481481481481" />
         <entry key="..\:/Users/HP/Documents/Sohan/AI-Keyboard-master/AI-Keyboard-master/app/src/main/res/layout/keyboard.xml" value="0.17831813576494426" />
