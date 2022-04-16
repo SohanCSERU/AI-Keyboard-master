@@ -1,4 +1,5 @@
 # A Artificial Intelligence based bangla Keyboard Mobile app 
+Our aim is to make a make a bangla keyboard that can predict next word from a ai powered model.
 ## The RoadMap
 - Create a Bangla Keyboard with **প্রভাত** layout  
 - We create a classifier in Python using __TensorFlow__ and __Keras__.    
