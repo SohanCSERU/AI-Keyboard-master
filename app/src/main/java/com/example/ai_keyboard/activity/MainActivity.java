@@ -21,7 +21,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.ai_keyboard.activity.ml.Model;
+import com.example.ai_keyboard.activity.ml.BnLstm;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import org.json.JSONException;
@@ -163,7 +163,8 @@ public class MainActivity extends AppCompatActivity {
     public float[] loadModel(ArrayList<Integer>data){
         float[] output = new float[10001];
         try {
-            Model model = Model.newInstance(getApplicationContext());
+//            Model model = Model.newInstance(getApplicationContext());
+            BnLstm model = BnLstm.newInstance(getApplicationContext());
 
             // Creates inputs for reference.
             TensorBuffer inputFeature0 = TensorBuffer.createFixedSize(new int[]{1, 199}, DataType.FLOAT32);
@@ -177,7 +178,8 @@ public class MainActivity extends AppCompatActivity {
             inputFeature0.loadBuffer(byteBuffer);
 
             // Runs model inference and gets result.
-            Model.Outputs outputs = model.process(inputFeature0);
+//            Model.Outputs outputs = model.process(inputFeature0);
+            BnLstm.Outputs outputs = model.process(inputFeature0);
             TensorBuffer outputFeature0 = outputs.getOutputFeature0AsTensorBuffer();
             float[] confidences = outputFeature0.getFloatArray();
 
