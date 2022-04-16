@@ -132,9 +132,9 @@ public class MainActivity extends AppCompatActivity {
                 storeEditText = editText.getText().toString();
                 editText.getText().clear();
                 editText.setText(storeEditText+ " "+ ans.get(i));
-                String text = "Item"+ i;
+                String text = storeEditText+" "+ans.get(i);
                 clickPredicModel();
-                Toast.makeText(MainActivity.this,"word: "+ text,Toast.LENGTH_SHORT).show();
+                editText.setSelection(text.length());
             }
         });
     }
